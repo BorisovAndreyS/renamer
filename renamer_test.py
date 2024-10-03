@@ -12,14 +12,16 @@ if change_ext == 'y':
     new_ext = input('Введите расширение в виде ".jpg"')
 
 #Получили абсолютный путь до текущего файла
-file_name = os.path.basename(os.path.abspath(__file__))
 
+file_name = os.path.basename(os.path.abspath(__file__))
+print(file_name)
+print(os.path.abspath(__file__))
 #получили список всех файлов в текущей директории
 def files_and_dir():
     return os.listdir()
 
 #список исключения
-uninclude = ['.git' , '.idea', '.venv', file_name]
+uninclude = ['.git' , '.idea', '.venv', file_name, 'build', 'dist', 'renamer_test.spec']
 
 list_file = []
 
